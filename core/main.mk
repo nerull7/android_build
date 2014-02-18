@@ -297,6 +297,8 @@ ifneq (,$(user_variant))
   ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=1
 
   ifeq ($(user_variant),userdebug)
+    # Secure ADB in userdebug
+    ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
     # Pick up some extra useful tools
     tags_to_install += debug
 
